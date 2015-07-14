@@ -81,6 +81,7 @@
 		DEDC89581B55053700411855 /* Action_Target */ = {
 			isa = PBXGroup;
 			children = (
+				DEDC897F1B55084C00411855 /* Classes */,
 				DEDC895D1B55053700411855 /* AppDelegate.h */,
 				DEDC895E1B55053700411855 /* AppDelegate.m */,
 				DEDC89601B55053700411855 /* ViewController.h */,
@@ -117,6 +118,53 @@
 				DEDC89741B55053700411855 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEDC897F1B55084C00411855 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DEDC89841B55088F00411855 /* View */,
+				DEDC89831B55088700411855 /* Tool */,
+				DEDC89821B55087E00411855 /* Model */,
+				DEDC89811B55087500411855 /* Controller */,
+				DEDC89801B55086500411855 /* Category */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DEDC89801B55086500411855 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		DEDC89811B55087500411855 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DEDC89821B55087E00411855 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEDC89831B55088700411855 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		DEDC89841B55088F00411855 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
