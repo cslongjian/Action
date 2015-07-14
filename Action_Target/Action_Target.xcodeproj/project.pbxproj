@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2555C4AB1B5546E9009A7D08 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2555C4AA1B5546E9009A7D08 /* BaseViewController.m */; };
+		2555C4AE1B5547C1009A7D08 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2555C4AD1B5547C1009A7D08 /* MainViewController.m */; };
+		2555C4B21B554A85009A7D08 /* UITabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2555C4B11B554A85009A7D08 /* UITabbarButton.m */; };
+		2555C4B51B554AB5009A7D08 /* UITabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2555C4B41B554AB5009A7D08 /* UITabbar.m */; };
 		DEDC895C1B55053700411855 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC895B1B55053700411855 /* main.m */; };
 		DEDC895F1B55053700411855 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC895E1B55053700411855 /* AppDelegate.m */; };
 		DEDC89621B55053700411855 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89611B55053700411855 /* ViewController.m */; };
@@ -27,6 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2555C4A91B5546E9009A7D08 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2555C4AA1B5546E9009A7D08 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2555C4AC1B5547C1009A7D08 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2555C4AD1B5547C1009A7D08 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2555C4B01B554A85009A7D08 /* UITabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbarButton.h; sourceTree = "<group>"; };
+		2555C4B11B554A85009A7D08 /* UITabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbarButton.m; sourceTree = "<group>"; };
+		2555C4B31B554AB5009A7D08 /* UITabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabbar.h; sourceTree = "<group>"; };
+		2555C4B41B554AB5009A7D08 /* UITabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabbar.m; sourceTree = "<group>"; };
 		DEDC89561B55053700411855 /* Action_Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Action_Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDC895A1B55053700411855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDC895B1B55053700411855 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +72,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2555C4A71B5546AE009A7D08 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2555C4AF1B554A58009A7D08 /* View */,
+				2555C4A81B5546D0009A7D08 /* Controller */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2555C4A81B5546D0009A7D08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2555C4A91B5546E9009A7D08 /* BaseViewController.h */,
+				2555C4AA1B5546E9009A7D08 /* BaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2555C4AF1B554A58009A7D08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2555C4B01B554A85009A7D08 /* UITabbarButton.h */,
+				2555C4B11B554A85009A7D08 /* UITabbarButton.m */,
+				2555C4B31B554AB5009A7D08 /* UITabbar.h */,
+				2555C4B41B554AB5009A7D08 /* UITabbar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DEDC894D1B55053700411855 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +122,7 @@
 		DEDC89581B55053700411855 /* Action_Target */ = {
 			isa = PBXGroup;
 			children = (
-				DEDC897F1B55084C00411855 /* Classes */,
+				2555C4A71B5546AE009A7D08 /* Classes */,
 				DEDC895D1B55053700411855 /* AppDelegate.h */,
 				DEDC895E1B55053700411855 /* AppDelegate.m */,
 				DEDC89601B55053700411855 /* ViewController.h */,
@@ -90,6 +131,8 @@
 				DEDC89661B55053700411855 /* Images.xcassets */,
 				DEDC89681B55053700411855 /* LaunchScreen.xib */,
 				DEDC89591B55053700411855 /* Supporting Files */,
+				2555C4AC1B5547C1009A7D08 /* MainViewController.h */,
+				2555C4AD1B5547C1009A7D08 /* MainViewController.m */,
 			);
 			path = Action_Target;
 			sourceTree = "<group>";
@@ -118,53 +161,6 @@
 				DEDC89741B55053700411855 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DEDC897F1B55084C00411855 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				DEDC89841B55088F00411855 /* View */,
-				DEDC89831B55088700411855 /* Tool */,
-				DEDC89821B55087E00411855 /* Model */,
-				DEDC89811B55087500411855 /* Controller */,
-				DEDC89801B55086500411855 /* Category */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		DEDC89801B55086500411855 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Category;
-			sourceTree = "<group>";
-		};
-		DEDC89811B55087500411855 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		DEDC89821B55087E00411855 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		DEDC89831B55088700411855 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tool;
-			sourceTree = "<group>";
-		};
-		DEDC89841B55088F00411855 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDC89621B55053700411855 /* ViewController.m in Sources */,
+				2555C4B21B554A85009A7D08 /* UITabbarButton.m in Sources */,
+				2555C4AB1B5546E9009A7D08 /* BaseViewController.m in Sources */,
 				DEDC895F1B55053700411855 /* AppDelegate.m in Sources */,
+				2555C4B51B554AB5009A7D08 /* UITabbar.m in Sources */,
+				2555C4AE1B5547C1009A7D08 /* MainViewController.m in Sources */,
 				DEDC895C1B55053700411855 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -384,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -398,6 +398,7 @@
 				INFOPLIST_FILE = Action_Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -408,6 +409,7 @@
 				INFOPLIST_FILE = Action_Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -464,6 +466,7 @@
 				DEDC897B1B55053700411855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEDC897C1B55053700411855 /* Build configuration list for PBXNativeTarget "Action_TargetTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +475,7 @@
 				DEDC897E1B55053700411855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
