@@ -10,4 +10,7 @@
 
 @interface MainViewController : UITabBarController
 
+//@property(nonatomic,strong) UIView *addView;
+//@property(nonatomic,strong) UIButton *addBtn;
+
 @end

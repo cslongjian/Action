@@ -18,6 +18,7 @@
 		DEDC89671B55053700411855 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDC89661B55053700411855 /* Images.xcassets */; };
 		DEDC896A1B55053700411855 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDC89681B55053700411855 /* LaunchScreen.xib */; };
 		DEDC89761B55053700411855 /* Action_TargetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89751B55053700411855 /* Action_TargetTests.m */; };
+		DEDC89881B5656EE00411855 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89871B5656EE00411855 /* UIImage+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		DEDC896F1B55053700411855 /* Action_TargetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Action_TargetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDC89741B55053700411855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDC89751B55053700411855 /* Action_TargetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Action_TargetTests.m; sourceTree = "<group>"; };
+		DEDC89861B5656EE00411855 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		DEDC89871B5656EE00411855 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 		2555C4A71B5546AE009A7D08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DEDC89851B5656DA00411855 /* Category */,
 				2555C4AF1B554A58009A7D08 /* View */,
 				2555C4A81B5546D0009A7D08 /* Controller */,
 			);
@@ -161,6 +165,15 @@
 				DEDC89741B55053700411855 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEDC89851B5656DA00411855 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DEDC89861B5656EE00411855 /* UIImage+Utils.h */,
+				DEDC89871B5656EE00411855 /* UIImage+Utils.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 				2555C4B51B554AB5009A7D08 /* UITabbar.m in Sources */,
 				2555C4AE1B5547C1009A7D08 /* MainViewController.m in Sources */,
 				DEDC895C1B55053700411855 /* main.m in Sources */,
+				DEDC89881B5656EE00411855 /* UIImage+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
