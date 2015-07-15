@@ -19,6 +19,8 @@
 		DEDC896A1B55053700411855 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDC89681B55053700411855 /* LaunchScreen.xib */; };
 		DEDC89761B55053700411855 /* Action_TargetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89751B55053700411855 /* Action_TargetTests.m */; };
 		DEDC89881B5656EE00411855 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89871B5656EE00411855 /* UIImage+Utils.m */; };
+		DEDC898B1B5665FF00411855 /* AddNewTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC898A1B5665FF00411855 /* AddNewTargetViewController.m */; };
+		DEDC898D1B56663D00411855 /* AddNewTarget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDC898C1B56663D00411855 /* AddNewTarget.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		DEDC89751B55053700411855 /* Action_TargetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Action_TargetTests.m; sourceTree = "<group>"; };
 		DEDC89861B5656EE00411855 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
 		DEDC89871B5656EE00411855 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
+		DEDC89891B5665FF00411855 /* AddNewTargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTargetViewController.h; sourceTree = "<group>"; };
+		DEDC898A1B5665FF00411855 /* AddNewTargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTargetViewController.m; sourceTree = "<group>"; };
+		DEDC898C1B56663D00411855 /* AddNewTarget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNewTarget.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,8 @@
 			children = (
 				2555C4A91B5546E9009A7D08 /* BaseViewController.h */,
 				2555C4AA1B5546E9009A7D08 /* BaseViewController.m */,
+				DEDC89891B5665FF00411855 /* AddNewTargetViewController.h */,
+				DEDC898A1B5665FF00411855 /* AddNewTargetViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 				DEDC89591B55053700411855 /* Supporting Files */,
 				2555C4AC1B5547C1009A7D08 /* MainViewController.h */,
 				2555C4AD1B5547C1009A7D08 /* MainViewController.m */,
+				DEDC898C1B56663D00411855 /* AddNewTarget.storyboard */,
 			);
 			path = Action_Target;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDC898D1B56663D00411855 /* AddNewTarget.storyboard in Resources */,
 				DEDC89651B55053700411855 /* Main.storyboard in Resources */,
 				DEDC896A1B55053700411855 /* LaunchScreen.xib in Resources */,
 				DEDC89671B55053700411855 /* Images.xcassets in Resources */,
@@ -283,6 +292,7 @@
 				2555C4B51B554AB5009A7D08 /* UITabbar.m in Sources */,
 				2555C4AE1B5547C1009A7D08 /* MainViewController.m in Sources */,
 				DEDC895C1B55053700411855 /* main.m in Sources */,
+				DEDC898B1B5665FF00411855 /* AddNewTargetViewController.m in Sources */,
 				DEDC89881B5656EE00411855 /* UIImage+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FG4-Af-KFh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Za6-e6-7DT">
+            <objects>
+                <navigationController id="FG4-Af-KFh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OmC-Fj-YNo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ada-7K-9A1" kind="relationship" relationship="rootViewController" id="3kv-nC-dC0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5R4-tU-Uc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="432"/>
+        </scene>
+        <!--新目标-->
+        <scene sceneID="HDV-Ev-Icf">
+            <objects>
+                <viewController id="ada-7K-9A1" customClass="AddNewTargetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cPK-qQ-TgX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BnX-gU-Iaq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="062-Yd-cfC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新目标" id="3ti-21-fJ4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFR-B6-Xhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="414"/>
+        </scene>
+    </scenes>
+</document>

@@ -98,8 +98,8 @@
 {
     NSLog(@"进入添加逻辑");
     //跳转别的storyboard  用这种方式。
-//    UIViewController *vc = [UIStoryboard storyboardWithName:@"add" bundle:nil].instantiateInitialViewController;
-//    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
+    UIViewController *vc = [UIStoryboard storyboardWithName:@"AddNewTarget" bundle:nil].instantiateInitialViewController;
+    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
     
 }
 
