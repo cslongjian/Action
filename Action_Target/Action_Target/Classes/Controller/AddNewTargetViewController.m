@@ -24,6 +24,7 @@
     UIButton *CButton = [[UIButton alloc] initWithFrame:btnframe];
     CButton.backgroundColor = [UIColor clearColor];
     [CButton setTitle:@"取消" forState:UIControlStateNormal];
+    CButton.titleLabel.font =  [UIFont systemFontOfSize: 14];
     [CButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [CButton setTitleColor:[UIColor blueColor]forState:UIControlStateSelected];
     [CButton addTarget:self action:@selector(returnMenu) forControlEvents:UIControlEventTouchUpInside];
@@ -32,10 +33,33 @@
     
     self.navigationItem.leftBarButtonItem = cancelBtnItem ;
     
+//    
+//    UIBarButtonItem *AddBtnItem = [[UIBarButtonItem alloc]initWithTitle:@"添加"  style:UIBarButtonItemStylePlain target:self action:@selector(addTarget)];
+//    
     
-    UIBarButtonItem *AddBtnItem = [[UIBarButtonItem alloc]initWithTitle:@"添加"  style:UIBarButtonItemStylePlain target:self action:@selector(addTarget)];
+    CGRect addbtnframe = CGRectMake(5, 5, 40, 40);
+    UIButton *AddButton = [[UIButton alloc] initWithFrame:addbtnframe];
+    AddButton.backgroundColor = [UIColor clearColor];
+    [AddButton setTitle:@"添加" forState:UIControlStateNormal];
+    AddButton.titleLabel.font =  [UIFont systemFontOfSize: 14];
+    [AddButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [AddButton setTitleColor:[UIColor blueColor]forState:UIControlStateSelected];
+    [AddButton addTarget:self action:@selector(addTarget) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIBarButtonItem *AddBtnItem = [[UIBarButtonItem alloc]initWithCustomView:AddButton];
+    
+
     
     self.navigationItem.rightBarButtonItem = AddBtnItem;
+    
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                
+                                [UIColor blackColor],
+                                
+                                NSForegroundColorAttributeName, nil];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
     
 
 }

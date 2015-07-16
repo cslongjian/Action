@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,7 +33,70 @@
                     <view key="view" contentMode="scaleToFill" id="062-Yd-cfC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="主题" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgT-Ff-eBu">
+                                <rect key="frame" x="16" y="96" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="描述" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7V-2y-uBb">
+                                <rect key="frame" x="16" y="146" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-45-vU4">
+                                <rect key="frame" x="504" y="210" width="70" height="30"/>
+                                <state key="normal" title="提示">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei5-XC-9GU">
+                                <rect key="frame" x="404" y="210" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="9u8-Hi-bPY"/>
+                                </constraints>
+                                <state key="normal" title="图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-Sw-Frs">
+                                <rect key="frame" x="16" y="210" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fo9-hJ-Diq"/>
+                                </constraints>
+                                <state key="normal" title="类型">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sg3-Sw-Frs" firstAttribute="baseline" secondItem="Ei5-XC-9GU" secondAttribute="baseline" id="2DK-Rf-kYv"/>
+                            <constraint firstAttribute="centerX" secondItem="FgT-Ff-eBu" secondAttribute="centerX" id="4c3-hE-LHW"/>
+                            <constraint firstItem="Q96-45-vU4" firstAttribute="baseline" secondItem="Ei5-XC-9GU" secondAttribute="baseline" id="8R5-X5-ALL"/>
+                            <constraint firstItem="FgT-Ff-eBu" firstAttribute="leading" secondItem="062-Yd-cfC" secondAttribute="leadingMargin" id="Ibr-7n-epj"/>
+                            <constraint firstAttribute="trailing" secondItem="FgT-Ff-eBu" secondAttribute="trailing" constant="204" id="JSy-0R-odA"/>
+                            <constraint firstItem="Q96-45-vU4" firstAttribute="leading" secondItem="Ei5-XC-9GU" secondAttribute="trailing" constant="30" id="Kwm-5X-NZh"/>
+                            <constraint firstItem="i7V-2y-uBb" firstAttribute="trailing" secondItem="FgT-Ff-eBu" secondAttribute="trailing" id="MfM-XH-wJX"/>
+                            <constraint firstItem="FgT-Ff-eBu" firstAttribute="top" secondItem="cPK-qQ-TgX" secondAttribute="bottom" constant="32" id="NTF-8x-AH1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q96-45-vU4" secondAttribute="trailing" constant="10" id="SjT-Sl-yQg"/>
+                            <constraint firstItem="i7V-2y-uBb" firstAttribute="leading" secondItem="FgT-Ff-eBu" secondAttribute="leading" id="dSI-RE-x4l"/>
+                            <constraint firstItem="i7V-2y-uBb" firstAttribute="top" secondItem="FgT-Ff-eBu" secondAttribute="bottom" constant="20" id="hC0-c3-BB6"/>
+                            <constraint firstItem="FgT-Ff-eBu" firstAttribute="trailing" secondItem="062-Yd-cfC" secondAttribute="trailingMargin" id="j7p-rG-Xn9"/>
+                            <constraint firstItem="sg3-Sw-Frs" firstAttribute="leading" secondItem="i7V-2y-uBb" secondAttribute="leading" id="lx2-XP-c0I"/>
+                            <constraint firstItem="sg3-Sw-Frs" firstAttribute="top" secondItem="i7V-2y-uBb" secondAttribute="bottom" constant="34" id="m2T-IF-JzK"/>
+                            <constraint firstAttribute="trailing" secondItem="Ei5-XC-9GU" secondAttribute="trailing" constant="126" id="nti-vG-cam"/>
+                            <constraint firstItem="FgT-Ff-eBu" firstAttribute="top" secondItem="cPK-qQ-TgX" secondAttribute="bottom" constant="60" id="p50-mA-fjq"/>
+                            <constraint firstItem="FgT-Ff-eBu" firstAttribute="leading" secondItem="062-Yd-cfC" secondAttribute="leading" constant="204" id="pP7-hi-jV7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4c3-hE-LHW"/>
+                                <exclude reference="JSy-0R-odA"/>
+                                <exclude reference="p50-mA-fjq"/>
+                                <exclude reference="pP7-hi-jV7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="新目标" id="3ti-21-fJ4"/>
                 </viewController>
