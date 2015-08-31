@@ -103,7 +103,7 @@
 
 -(void) btnClick:(UIButton *)button{
     if (button.tag!=2) {
-        
+        //传递回去代理设置当前的VC
         [self.delegate changeNav:selectBarButton.tag to:button.tag];
         selectBarButton.selected = NO;
         button.selected = YES;

@@ -62,7 +62,7 @@
     _addView.frame = CGRectMake(self.tabBar.frame.size.width/2-kCameraViewWidth/2, -11, kCameraBtnWidth, kCameraBtnHeight);
     [self.tabBar addSubview:_addView];
     [self.tabBar bringSubviewToFront:_addView];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,9 +77,9 @@
     
     //操作整个应用中的所有导航栏，只需要给它设置就可以了
     UINavigationBar *navBar = [UINavigationBar appearance];
-    navBar.tintColor = [UIColor whiteColor];
+    navBar.tintColor = [UIColor redColor];
     //设置导航栏标题颜色
-    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
     
 }
 
@@ -92,6 +92,7 @@
     
 }
 
+//设置当前VC选择器
 -(void)changeNav:(NSInteger)from to:(NSInteger)to{
     self.selectedIndex = to;
 }
