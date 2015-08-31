@@ -1,7 +1,7 @@
 //
 //  MainViewController.m
 //  Action_Target
-//
+//  一个空壳文件。暂时先修改这样吧。
 //  Created by 陈龙坚 on 15/7/14.
 //  Copyright (c) 2015年 chenlongjian. All rights reserved.
 //
@@ -15,12 +15,8 @@
 #import "UIImage+Utils.h"
 
 @interface MainViewController ()<UINavigationControllerDelegate,UTabbarDelegate,UINavigationControllerDelegate>
-
 @property(nonatomic,strong) UIView *addView;
 @property(nonatomic,strong) UIButton *addBtn;
-
-
-
 @end
 
 @implementation MainViewController
@@ -39,7 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self setNavigationTheme];
     
     UITabbar *utabbar = [[UITabbar alloc] initWithFrame:self.tabBar.bounds];
@@ -67,11 +62,6 @@
     _addView.frame = CGRectMake(self.tabBar.frame.size.width/2-kCameraViewWidth/2, -11, kCameraBtnWidth, kCameraBtnHeight);
     [self.tabBar addSubview:_addView];
     [self.tabBar bringSubviewToFront:_addView];
-
-    
-    
-    
-    
     
 }
 
@@ -79,7 +69,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /**
  *  设置导航栏以及信号栏主题样式
@@ -106,8 +95,6 @@
 -(void)changeNav:(NSInteger)from to:(NSInteger)to{
     self.selectedIndex = to;
 }
-
-
 
 /*
 #pragma mark - Navigation
