@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //隐藏navigationController底部tool
+//    [self setHidesBottomBarWhenPushed:YES];
+    //隐藏顶部导航栏
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,6 @@
         <!--Main View Controller-->
         <scene sceneID="emZ-Cy-gw7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c2i-wK-IVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="nQs-R5-go3" customClass="MainViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="BZK-wo-4Me">
@@ -24,6 +23,7 @@
                         <segue destination="Iw3-3T-DLY" kind="relationship" relationship="viewControllers" id="CXj-rr-wsn"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2i-wK-IVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1502" y="-166"/>
         </scene>
@@ -138,7 +138,7 @@
         <!--操作日历-->
         <scene sceneID="0Wx-aV-t6k">
             <objects>
-                <viewController id="4Mq-DR-BnC" sceneMemberID="viewController">
+                <viewController id="4Mq-DR-BnC" customClass="OpCalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCS-vD-OfH"/>
                         <viewControllerLayoutGuide type="bottom" id="ANe-Oc-2XB"/>
