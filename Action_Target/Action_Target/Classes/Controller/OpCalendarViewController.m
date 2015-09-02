@@ -9,8 +9,13 @@
 #import "OpCalendarViewController.h"
 #import "VRGCalendarView.h"
 #import "NSDate+convenience.h"
+#import "DBTool.h"
 
-@interface OpCalendarViewController ()<VRGCalendarViewDelegate>
+@interface OpCalendarViewController ()<VRGCalendarViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property(strong, nonatomic) UITableView *table;
+@property(strong, nonatomic) NSArray *arraymission;
+@property(strong, nonatomic) VRGCalendarView *calendar;
 
 @end
 
@@ -19,20 +24,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.arraymission = [[DBTool shareInstance] queryAllMission];
     
-    VRGCalendarView *calendar = [[VRGCalendarView alloc] init];
-    calendar.delegate=self;
-    //添加多一层VIEW 。用于展示控制位置
-    CGRect position = self.view.frame;
-    position.origin.y = position.origin.y+20;
-    UIView *ContainCalendar = [[UIView alloc]initWithFrame:position];
+//    self.calendar = [[VRGCalendarView alloc] initWithFrame:CGRectMake(0, 0, 320, 340)];
+    self.calendar = [[VRGCalendarView alloc] init];
+    
+    self.calendar.delegate=self;
+//    //添加多一层VIEW 。用于展示控制位置
+//    CGRect position = CGRectMake(0, 0, 320, 240);
+//    position.origin.y = position.origin.y+20;
+//    UIView *ContainCalendar = [[UIView alloc]initWithFrame:position];
 //    ContainCalendar.backgroundColor = [UIColor blueColor];
-    [ContainCalendar addSubview:calendar];
-    
-    [self.view addSubview:ContainCalendar];
-    
-    NSLog(@"gggg");
 
+//    
+//    CGRect tableposition = calendar.frame;
+//   tableposition.origin.y = calendar.frame.size.height;
+    
+//    CGRect frame = CGRectMake(0, CGRectGetHeight(ContainCalendar.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-CGRectGetHeight(ContainCalendar.frame));
+//    self.table = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
+//    
+//    
+////    CGRect tableposition = self.view.frame;
+////    tableposition.origin.y = 340;
+////    self.table = [[UITableView alloc] initWithFrame:tableposition style:UITableViewStyleGrouped];
+//    self.table.delegate = self;
+//    self.table.dataSource = self;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+//    
+    [self.view addSubview:self.calendar];
+//
+//    [self.view addSubview:ContainCalendar];
+//    [self.view addSubview:self.table];
+
+    
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    CGRect frame = CGRectMake(0, CGRectGetHeight(self.calendar.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-CGRectGetHeight(self.calendar.frame));
+        self.table = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
+    //
+    //
+    ////    CGRect tableposition = self.view.frame;
+    ////    tableposition.origin.y = 340;
+    ////    self.table = [[UITableView alloc] initWithFrame:tableposition style:UITableViewStyleGrouped];
+        self.table.delegate = self;
+        self.table.dataSource = self;
+        self.automaticallyAdjustsScrollViewInsets = NO;
     
 }
 
@@ -51,6 +92,7 @@
 }
 */
 
+#pragma mark calendar opration
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated
 {
     if (month==[[NSDate date] month]) {
@@ -62,6 +104,31 @@
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date
 {
     
+}
+
+#pragma mark tableview
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+//    return [self.arraymission count];
+    return 20;
+}
+
+// -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return ;
+//}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"cell";
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellId];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] init];
+    }
+    
+    cell.textLabel.text = @"cesh";
+    return cell;
 }
 
 @end
