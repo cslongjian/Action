@@ -17,6 +17,15 @@
 		DE8C6BB21B9556D50011DF6B /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BAB1B9556D50011DF6B /* UIColor+expanded.m */; };
 		DE8C6BB31B9556D50011DF6B /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BAD1B9556D50011DF6B /* UIView+convenience.m */; };
 		DE8C6BB41B9556D50011DF6B /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BAF1B9556D50011DF6B /* VRGCalendarView.m */; };
+		DE8C6BC11B95890D0011DF6B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BB71B95890D0011DF6B /* FMDatabase.m */; };
+		DE8C6BC21B95890D0011DF6B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BB91B95890D0011DF6B /* FMDatabaseAdditions.m */; };
+		DE8C6BC31B95890D0011DF6B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BBB1B95890D0011DF6B /* FMDatabasePool.m */; };
+		DE8C6BC41B95890D0011DF6B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BBD1B95890D0011DF6B /* FMDatabaseQueue.m */; };
+		DE8C6BC51B95890D0011DF6B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BC01B95890D0011DF6B /* FMResultSet.m */; };
+		DE8C6BC71B958E1A0011DF6B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8C6BC61B958E1A0011DF6B /* libsqlite3.dylib */; };
+		DE8C6BC91B958E2B0011DF6B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8C6BC81B958E2B0011DF6B /* SenTestingKit.framework */; };
+		DE8C6BCD1B9590DD0011DF6B /* DBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BCC1B9590DD0011DF6B /* DBTool.m */; };
+		DE8C6BD11B95A4D60011DF6B /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8C6BD01B95A4D60011DF6B /* Mission.m */; };
 		DEDC895C1B55053700411855 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC895B1B55053700411855 /* main.m */; };
 		DEDC895F1B55053700411855 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC895E1B55053700411855 /* AppDelegate.m */; };
 		DEDC89621B55053700411855 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDC89611B55053700411855 /* ViewController.m */; };
@@ -60,6 +69,23 @@
 		DE8C6BAD1B9556D50011DF6B /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
 		DE8C6BAE1B9556D50011DF6B /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		DE8C6BAF1B9556D50011DF6B /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		DE8C6BB61B95890D0011DF6B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DE8C6BB71B95890D0011DF6B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DE8C6BB81B95890D0011DF6B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DE8C6BB91B95890D0011DF6B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DE8C6BBA1B95890D0011DF6B /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DE8C6BBB1B95890D0011DF6B /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DE8C6BBC1B95890D0011DF6B /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DE8C6BBD1B95890D0011DF6B /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DE8C6BBE1B95890D0011DF6B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		DE8C6BBF1B95890D0011DF6B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DE8C6BC01B95890D0011DF6B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		DE8C6BC61B958E1A0011DF6B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DE8C6BC81B958E2B0011DF6B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DE8C6BCB1B9590DD0011DF6B /* DBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTool.h; sourceTree = "<group>"; };
+		DE8C6BCC1B9590DD0011DF6B /* DBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTool.m; sourceTree = "<group>"; };
+		DE8C6BCF1B95A4D60011DF6B /* Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mission.h; sourceTree = "<group>"; };
+		DE8C6BD01B95A4D60011DF6B /* Mission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mission.m; sourceTree = "<group>"; };
 		DEDC89561B55053700411855 /* Action_Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Action_Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDC895A1B55053700411855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDC895B1B55053700411855 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8C6BC91B958E2B0011DF6B /* SenTestingKit.framework in Frameworks */,
+				DE8C6BC71B958E1A0011DF6B /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +129,8 @@
 		2555C4A71B5546AE009A7D08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DE8C6BCE1B95A4B20011DF6B /* Model */,
+				DE8C6BCA1B9590A30011DF6B /* Tool */,
 				DEDC89851B5656DA00411855 /* Category */,
 				2555C4AF1B554A58009A7D08 /* View */,
 				2555C4A81B5546D0009A7D08 /* Controller */,
@@ -135,6 +165,7 @@
 		DE8C6BA11B954CD40011DF6B /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				DE8C6BB51B95890D0011DF6B /* fmdb */,
 				DE8C6BA51B9556D50011DF6B /* Vurig_calendar */,
 			);
 			path = ThirdLibrary;
@@ -157,9 +188,47 @@
 			path = Vurig_calendar;
 			sourceTree = "<group>";
 		};
+		DE8C6BB51B95890D0011DF6B /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C6BB61B95890D0011DF6B /* FMDatabase.h */,
+				DE8C6BB71B95890D0011DF6B /* FMDatabase.m */,
+				DE8C6BB81B95890D0011DF6B /* FMDatabaseAdditions.h */,
+				DE8C6BB91B95890D0011DF6B /* FMDatabaseAdditions.m */,
+				DE8C6BBA1B95890D0011DF6B /* FMDatabasePool.h */,
+				DE8C6BBB1B95890D0011DF6B /* FMDatabasePool.m */,
+				DE8C6BBC1B95890D0011DF6B /* FMDatabaseQueue.h */,
+				DE8C6BBD1B95890D0011DF6B /* FMDatabaseQueue.m */,
+				DE8C6BBE1B95890D0011DF6B /* FMDB.h */,
+				DE8C6BBF1B95890D0011DF6B /* FMResultSet.h */,
+				DE8C6BC01B95890D0011DF6B /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		DE8C6BCA1B9590A30011DF6B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C6BCB1B9590DD0011DF6B /* DBTool.h */,
+				DE8C6BCC1B9590DD0011DF6B /* DBTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DE8C6BCE1B95A4B20011DF6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C6BCF1B95A4D60011DF6B /* Mission.h */,
+				DE8C6BD01B95A4D60011DF6B /* Mission.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DEDC894D1B55053700411855 = {
 			isa = PBXGroup;
 			children = (
+				DE8C6BC81B958E2B0011DF6B /* SenTestingKit.framework */,
+				DE8C6BC61B958E1A0011DF6B /* libsqlite3.dylib */,
 				DEDC89581B55053700411855 /* Action_Target */,
 				DEDC89721B55053700411855 /* Action_TargetTests */,
 				DEDC89571B55053700411855 /* Products */,
@@ -333,19 +402,26 @@
 			files = (
 				DEDC89621B55053700411855 /* ViewController.m in Sources */,
 				2555C4B21B554A85009A7D08 /* UITabbarButton.m in Sources */,
+				DE8C6BD11B95A4D60011DF6B /* Mission.m in Sources */,
 				2555C4AB1B5546E9009A7D08 /* BaseViewController.m in Sources */,
 				DEDC895F1B55053700411855 /* AppDelegate.m in Sources */,
+				DE8C6BC21B95890D0011DF6B /* FMDatabaseAdditions.m in Sources */,
 				2555C4B51B554AB5009A7D08 /* UITabbar.m in Sources */,
 				DE8C6BB11B9556D50011DF6B /* NSMutableArray+convenience.m in Sources */,
 				DE8C6BB21B9556D50011DF6B /* UIColor+expanded.m in Sources */,
 				2555C4AE1B5547C1009A7D08 /* MainViewController.m in Sources */,
+				DE8C6BC41B95890D0011DF6B /* FMDatabaseQueue.m in Sources */,
 				DEDC895C1B55053700411855 /* main.m in Sources */,
 				DE8C6BB41B9556D50011DF6B /* VRGCalendarView.m in Sources */,
 				DE8C6BB01B9556D50011DF6B /* NSDate+convenience.m in Sources */,
 				DE8C6BA41B9554DE0011DF6B /* OpCalendarViewController.m in Sources */,
+				DE8C6BC51B95890D0011DF6B /* FMResultSet.m in Sources */,
+				DE8C6BC31B95890D0011DF6B /* FMDatabasePool.m in Sources */,
 				DEDC898B1B5665FF00411855 /* AddNewTargetViewController.m in Sources */,
+				DE8C6BCD1B9590DD0011DF6B /* DBTool.m in Sources */,
 				DE8C6BB31B9556D50011DF6B /* UIView+convenience.m in Sources */,
 				DEDC89881B5656EE00411855 /* UIImage+Utils.m in Sources */,
+				DE8C6BC11B95890D0011DF6B /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +548,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = Action_Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +565,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = Action_Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

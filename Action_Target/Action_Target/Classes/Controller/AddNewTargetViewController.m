@@ -7,6 +7,8 @@
 //
 
 #import "AddNewTargetViewController.h"
+#import "FMDatabase.h"
+#import "FMDatabaseQueue.h"
 
 @interface AddNewTargetViewController ()
 
