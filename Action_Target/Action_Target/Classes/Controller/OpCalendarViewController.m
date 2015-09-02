@@ -30,6 +30,8 @@
     [ContainCalendar addSubview:calendar];
     
     [self.view addSubview:ContainCalendar];
+    
+    NSLog(@"gggg");
 
     
 }

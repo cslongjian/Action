@@ -99,6 +99,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="新目标" id="3ti-21-fJ4"/>
+                    <connections>
+                        <outlet property="missionName" destination="FgT-Ff-eBu" id="TN9-iL-YqR"/>
+                        <outlet property="mission_descript" destination="i7V-2y-uBb" id="Rdf-eE-JBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFR-B6-Xhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

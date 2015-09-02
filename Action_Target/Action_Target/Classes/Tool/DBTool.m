@@ -10,31 +10,35 @@
 
 @implementation DBTool
 
-static DBTool *_instance = nil;
+//singleton_implementation(DBTool)
+
+static DBTool *instance = nil;
+
 
 +(instancetype)shareInstance
 {
     static  dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[self alloc]init];
+        instance = [[self alloc]init];
     });
-    return _instance;
+    return instance;
 }
 
 +(id) allocWithZone:(struct _NSZone *)zone
 {
-    return [DBTool shareInstance];
+    static  dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [super allocWithZone:zone];
+    });
+    return instance;
 }
 
--(id) copyWithZone:(struct _NSZone *)zone
-{
-    return [DBTool shareInstance];
-}
+
 
 //创建表
 +(void) createDBTable
 {
-    FMDatabase *db = [[self shareInstance] fmdb];
+    FMDatabase *db = [[DBTool shareInstance] fmdb];
     if (!db) {
         //判定数据库是否创建，不过使用了懒加载，这个判定有点多余了。
         NSLog(@"DB未创建，请先创建DB");
@@ -52,8 +56,9 @@ static DBTool *_instance = nil;
     //判断数据库中是否已经存在这个表，如果不存在则创建该表
     if(![db tableExists:@"mission"])
     {
-        BOOL mark = [db executeUpdate:@"CREATE TABLES mission(mission_id INTEGER PRIMARY KEY AUTOINCREAMENT, name TEXT, description TEXT) "];
-        if (mark) {
+//        BOOL mark = [db executeUpdate:@"CREATE TABLES mission(mission_id INTEGER PRIMARY KEY AUTOINCREAMENT, name TEXT, description TEXT);"];
+           BOOL result=[db executeUpdate:@"CREATE TABLE IF NOT EXISTS mission (mission_id integer PRIMARY KEY AUTOINCREMENT, name text, description text);"];
+        if (result) {
               NSLog(@"创建完成");
         }
        
@@ -80,16 +85,19 @@ static DBTool *_instance = nil;
     if (![self openDB]) {
         return;
     }
+    
     long missionid = mission.mission_id;
+    
+    [self.fmdb open];
+    
     FMResultSet *rs = [self.fmdb executeQuery:@"select * from mission where mission_id = ?",[NSString stringWithFormat:@"%ld",missionid]];
     	if([rs next])
         	{
-            	NSLog(@"dddddslsdkien");
-            	[self.fmdb executeUpdate:@"update mission set name = ?, description = ? where mission_id = 1",mission.name,mission.mission_description];
-            	}
+                [self.fmdb executeUpdate:@"update mission set name = ?, description = ? where mission_id = 1",mission.name,mission.mission_description];
+            }
     	//向数据库中插入一条数据
     	else{
-        	[self.fmdb executeUpdate:@"INSERT INTO mission (name, description) VALUES (?,?)",mission.name,mission.mission_description];
+        	[self.fmdb executeUpdate:@"INSERT INTO mission (name, description) VALUES (?,?)",mission.name, mission.mission_description];
         	}
 }
 

@@ -7,8 +7,8 @@
 //
 
 #import "AddNewTargetViewController.h"
-#import "FMDatabase.h"
-#import "FMDatabaseQueue.h"
+#import "DBTool.h"
+
 
 @interface AddNewTargetViewController ()
 
@@ -19,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [super viewDidLoad];
+    [DBTool createDBTable];
     
     CGRect btnframe = CGRectMake(5, 5, 40, 40);
     UIButton *CButton = [[UIButton alloc] initWithFrame:btnframe];
@@ -63,7 +62,6 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
     
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,7 +81,18 @@
 {
     NSLog(@"添加完成");
     
-}
+    DBTool *dbtool = [DBTool shareInstance];
+    
+    NSLog(@"%@",self.missionName.text);
+    NSLog(@"%@",self.mission_descript.text);
+    Mission *mission = [[Mission alloc]init];
+    mission.name = self.missionName.text;
+    mission.mission_description = self.mission_descript.text;
+    
+    [dbtool insertMission:mission];
+    
+    UIViewController *vc = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
+    [UIApplication sharedApplication].keyWindow.rootViewController = vc;}
 
 
 

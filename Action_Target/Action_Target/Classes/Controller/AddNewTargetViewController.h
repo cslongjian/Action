@@ -10,4 +10,8 @@
 
 @interface AddNewTargetViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *missionName;
+
+@property (weak, nonatomic) IBOutlet UITextField *mission_descript;
+
 @end
