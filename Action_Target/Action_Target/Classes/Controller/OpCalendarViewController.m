@@ -16,6 +16,7 @@
 @property(strong, nonatomic) UITableView *table;
 @property(strong, nonatomic) NSArray *arraymission;
 @property(strong, nonatomic) VRGCalendarView *calendar;
+@property(strong, nonatomic) UIView *ContainCalendar;
 
 @end
 
@@ -31,10 +32,9 @@
     
     self.calendar.delegate=self;
 //    //添加多一层VIEW 。用于展示控制位置
-//    CGRect position = CGRectMake(0, 0, 320, 240);
-//    position.origin.y = position.origin.y+20;
-//    UIView *ContainCalendar = [[UIView alloc]initWithFrame:position];
-//    ContainCalendar.backgroundColor = [UIColor blueColor];
+    CGRect position = CGRectMake(0, 20, 320, 358);
+    self.ContainCalendar = [[UIView alloc]initWithFrame:position];
+    self.ContainCalendar.backgroundColor = [UIColor blueColor];
 
 //    
 //    CGRect tableposition = calendar.frame;
@@ -50,10 +50,12 @@
 //    self.table.delegate = self;
 //    self.table.dataSource = self;
 //    self.automaticallyAdjustsScrollViewInsets = NO;
-//    
-    [self.view addSubview:self.calendar];
 //
-//    [self.view addSubview:ContainCalendar];
+    
+    [self.ContainCalendar addSubview:self.calendar];
+//    [self.view addSubview:self.calendar];
+//
+    [self.view addSubview:self.ContainCalendar];
 //    [self.view addSubview:self.table];
 
     
@@ -64,8 +66,8 @@
 {
     [super viewWillAppear:animated];
     
-    CGRect frame = CGRectMake(0, CGRectGetHeight(self.calendar.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-CGRectGetHeight(self.calendar.frame));
-        self.table = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
+    CGRect frame = CGRectMake(0, CGRectGetHeight(self.ContainCalendar.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-CGRectGetHeight(self.ContainCalendar.frame));
+        self.table = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     //
     //
     ////    CGRect tableposition = self.view.frame;
@@ -74,6 +76,11 @@
         self.table.delegate = self;
         self.table.dataSource = self;
         self.automaticallyAdjustsScrollViewInsets = NO;
+    self.table.tableFooterView = nil;
+    self.table.tableHeaderView = nil;
+    
+    
+    [self.view addSubview:self.table];
     
 }
 
@@ -95,10 +102,14 @@
 #pragma mark calendar opration
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated
 {
+    
+    NSLog(@"操作提示---");
     if (month==[[NSDate date] month]) {
         NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],[NSNumber numberWithInt:20], nil];
         [calendarView markDates:dates];
     }
+    
+//    [self.calendar numRows]
 }
 
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date

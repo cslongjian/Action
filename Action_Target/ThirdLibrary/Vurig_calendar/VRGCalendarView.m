@@ -328,6 +328,9 @@
     
     CGContextSetFillColorWithColor(context, 
                                    [UIColor colorWithHexString:@"0x383838"].CGColor);
+    
+    NSLog(@"一个月有几周--：%d",[weekdays count]);
+    
     for (int i =0; i<[weekdays count]; i++) {
         NSString *weekdayValue = (NSString *)[weekdays objectAtIndex:i];
         UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:12];
@@ -335,6 +338,7 @@
     }
     
     int numRows = [self numRows];
+    NSLog(@"周数目--：%d",numRows);
     
     CGContextSetAllowsAntialiasing(context, NO);
     
